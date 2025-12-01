@@ -95,6 +95,96 @@ const Projects = () => {
               </motion.div>
             ))}
           </div>
+
+          {/* Events Section */}
+          <div className="mt-20">
+            <h3 className="text-3xl md:text-4xl font-display text-center mb-4 text-gradient">
+              Events
+            </h3>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary via-secondary to-accent mx-auto mb-12 rounded-full" />
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Past Events */}
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                className="gradient-card rounded-xl p-8 border border-border"
+              >
+                <h4 className="text-2xl font-display mb-6 text-primary">
+                  Past Events
+                </h4>
+                <a
+                  href="https://aiss.iiitd.edu.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-4 rounded-lg bg-background/50 border border-border hover:border-primary transition-all duration-300 hover:glow-primary"
+                >
+                  <h5 className="text-lg font-display mb-2 text-accent">
+                    Learning LLM from Scratch
+                  </h5>
+                  <p className="text-foreground mb-2">
+                    31st July - 2nd Aug 2025
+                  </p>
+                  <p className="text-muted-foreground text-sm mb-2">
+                    Taught basics of transformer encoder part, referring to the GitHub repo by{" "}
+                    <a 
+                      href="https://github.com/rasbt/LLMs-from-scratch"
+                      className="text-primary hover:underline"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      rasbt/LLMs-from-scratch
+                    </a>
+                  </p>
+                  <p className="text-muted-foreground text-sm italic">
+                    Blog for this session is under progress
+                  </p>
+                </a>
+              </motion.div>
+
+              {/* Upcoming Events */}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                className="gradient-card rounded-xl p-8 border border-border"
+              >
+                <h4 className="text-2xl font-display mb-6 text-primary">
+                  Upcoming Events
+                </h4>
+                <div className="space-y-6">
+                  <a
+                    href="https://www.ripsscon2025.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block p-4 rounded-lg bg-background/50 border border-border hover:border-primary transition-all duration-300 hover:glow-primary"
+                  >
+                    <h5 className="text-lg font-display mb-2 text-accent">
+                      Vibecoding Session
+                    </h5>
+                    <p className="text-foreground mb-1">
+                      Dec 5, 2025
+                    </p>
+                    <p className="text-muted-foreground text-sm">
+                      AIIMS (Ripsscon AI Workshop)
+                    </p>
+                  </a>
+
+                  <div className="p-4 rounded-lg bg-background/50 border border-border">
+                    <h5 className="text-lg font-display mb-2 text-accent">
+                      Vibecoding using Cursor + MCP
+                    </h5>
+                    <p className="text-foreground mb-1">
+                      January, 2026
+                    </p>
+                    <p className="text-muted-foreground text-sm">
+                      IIITD
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
